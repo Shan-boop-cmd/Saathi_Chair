@@ -7,6 +7,10 @@ presses one button, sits still for 90 seconds and answers three spoken yes/no qu
 the readings with **that person's own normal** and texts the family, with the reason, when the pattern starts
 to look like worsening heart failure: often days before a hospital visit.
 
+
+https://github.com/user-attachments/assets/e559d647-6299-4edf-a0c2-3a4cbf6d8adc
+
+
 > **Simulation-first.** The software, firmware and both custom circuits are built and tested in simulation.
 > No physical chair has been built and no real patient has been involved. SAATHI is a monitoring aid, not a
 > medical diagnosis tool, and is not an emergency service.
