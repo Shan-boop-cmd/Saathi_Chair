@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "SAATHI team",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btnGreen", "top": -80, "left": 220, "attrs": { "color": "green", "label": "YES / START" } },
+    { "type": "wokwi-pushbutton", "id": "btnRed", "top": 0, "left": 220, "attrs": { "color": "red", "label": "NO" } },
+    { "type": "wokwi-pushbutton", "id": "btnSos", "top": 80, "left": 220, "attrs": { "color": "black", "label": "SOS" } },
+    { "type": "wokwi-led", "id": "led", "top": -90, "left": -110, "attrs": { "color": "green", "label": "check running" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": -20, "left": -120, "rotate": 90, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "btnGreen:1.l", "esp:32", "green", [] ],
+    [ "btnGreen:2.l", "esp:GND.1", "black", [] ],
+    [ "btnRed:1.l", "esp:33", "red", [] ],
+    [ "btnRed:2.l", "esp:GND.1", "black", [] ],
+    [ "btnSos:1.l", "esp:27", "gray", [] ],
+    [ "btnSos:2.l", "esp:GND.1", "black", [] ],
+    [ "esp:18", "r1:2", "green", [] ],
+    [ "r1:1", "led:A", "green", [] ],
+    [ "led:C", "esp:GND.2", "black", [] ]
+  ],
+  "dependencies": {}
+}
