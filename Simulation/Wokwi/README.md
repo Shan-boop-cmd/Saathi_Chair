@@ -1,5 +1,7 @@
 # SAATHI chair: Wokwi demo
 
+Wokwi Simulation Link: https://wokwi.com/projects/478814715951206401
+
 The same firmware as `../saathi_chair`, built with `demo_mode.h` so the sensors are simulated and SMS and voice
 prompts are printed to the serial monitor. Buttons are real.
 
