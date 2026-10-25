@@ -1,0 +1,55 @@
+* SAATHI seat BCG front-end (MCP6004, 3.3 V single supply)
+.subckt OPAMP inp inn out vdd vss
+* generic rail-to-rail op-amp: open-loop gain 1e5, GBW 1 MHz (MCP6004 class), output limited to 0.01-3.29 V like a rail-to-rail part
+G1 0 n1 inp inn 1e-3
+R1 n1 0 1e8
+C1 n1 0 1.59e-10
+Vhi hi 0 3.28
+Vlo lo 0 0.02
+D1 n1 hi DCL
+D2 lo n1 DCL
+B2 out 0 V=max(0.01, min(3.29, V(n1)))
+.model DCL D(Is=1e-12 N=1)
+.ends OPAMP
+.model BAT54 D(Is=2e-7 N=1.05 Rs=2 Cjo=10p)
+
+VDD vdd 0 3.3
+* --- mid-rail reference ---
+R1 vdd vdiv 100k
+R2 vdiv 0 100k
+C1 vdiv 0 10u
+XUA vdiv vref vref vdd 0 OPAMP
+* --- PVDF film: open-circuit voltage behind its own capacitance ---
+VPZ pzs vref PWL file=sim/bcg_input.txt
+CP pzs pz 1n
+RLEAK pz vref 10G
+* --- input protection ---
+RIN pz nin 10k
+D3 nin vdd BAT54
+D4 0 nin BAT54
+* --- charge amplifier ---
+XUB vref nin o1 vdd 0 OPAMP
+CF o1 nin 4.7n
+RF o1 nin 47Meg
+* --- AC coupling, second high-pass pole ---
+CAC o1 n2 1u
+RAC n2 vref 220k
+* --- gain x101 with 15.9 Hz low-pass ---
+XUC n2 n3 o3 vdd 0 OPAMP
+RG n3 vref 10k
+RF2 o3 n3 1Meg
+CF2 o3 n3 10n
+* --- Sallen-Key low-pass ~23 Hz ---
+RS1 o3 s1 100k
+RS2 s1 s2 100k
+CS1 s1 o4 100n
+CS2 s2 vref 47n
+XUD s2 o4 o4 vdd 0 OPAMP
+* --- to ESP32 ADC (GPIO34) ---
+RO o4 adc 100
+CO adc 0 10n
+
+.tran 0 30 0 1m
+*.ac dec 60 0.05 2k
+* run .tran or .ac (comment one out in LTspice)
+.end
