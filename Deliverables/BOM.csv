@@ -1,0 +1,24 @@
+block,part,qty,unit_inr,line_inr,price,vendor,link
+Chair,Nilkamal CHR2060 plastic arm chair,1,1040,1040,verified,Nilkamal,https://www.nilkamalfurniture.com/collections/armed-plastic-chairs
+Controller,ESP32 30-pin CP2102 dev board (WROOM-32),1,499,499,verified,Probots,https://probots.co.in/esp32-30-pin-cp2102-development-board.html
+Weight,50 kg half-bridge body-scale load cell,4,39,156,verified,Robocraze,https://robocraze.com/products/50kg-load-cell
+Weight,HX711 load-cell amplifier module,1,59,59,verified,Probots,https://probots.co.in/hx711-load-cell-amplifier-board-adc-converter-weight-module.html
+HR / SpO2 / breathing,MAX30102 pulse-oximeter module,1,112.1,112.1,verified,Robosap,https://robosap.in/product/max30102-pulse-oxymeter-and-heart-rate-monitor-sensor/
+BCG,TE LDT0-028K PVDF piezo film,1,565,565,verified,Industrybuying,https://www.industrybuying.com/miscellaneous-connectors-te-connectivity-IND.MIS.832835851
+BCG,"MCP6004 quad rail-to-rail op-amp, 1 MHz (DIP-14)",1,120.78,120.78,verified,DNA Technology,https://www.dnatechindia.com/mcp-6004-low-power-op-amp-buy-online-india.html
+Impedance,"MCP6024 quad rail-to-rail op-amp, 10 MHz",1,170,170,estimate,LCSC,https://www.lcsc.com/product-detail/C183898.html
+Impedance,CD4066 quad analog switch (DIP-14),1,35,35,verified,Probots,https://probots.co.in/cd4066-quad-bilateral-switch-ic-dip-14-package.html
+SMS,"Stainless steel foot plates, 4 (toe + heel per foot)",1,200,200,estimate,local fabricator,
+Impedance,Safety hardening: 2 extra 1 uF film caps + 2 x 10 Mohm bleed resistors,1,12,12,estimate,,
+Voice,PAM8403 class-D amplifier module (driven by ESP32 DAC),1,18,18,verified,Probots,https://probots.co.in/pam8403-5v-two-channel-stereo-mini-class-d-3w3w-audio-amplifier.html
+Voice,"Speaker 0.5 W 8 ohm, 36 mm",1,23.72,23.72,verified,Zbotic,https://zbotic.in/product/0-5w-8ohm-trumpet-diameter-36mm/
+SMS,SIM800L GSM module,1,364,364,verified,Robocraze,https://robocraze.com/products/sim-800l-gsm-gprs-module
+Power,"TP4056 charger + protection, USB-C",1,49,49,verified,Probots,https://probots.co.in/tp4056-1a-li-ion-lithium-battery-charging-module-with-current-protection-type-c.html
+Power,MT3608 boost converter to 5 V,1,49,49,verified,Probots,https://probots.co.in/mt3608-step-up-boost-module-3-24v-to-5-28v-2a-power-regulator.html
+Power,18650 Li-ion cell 2600 mAh,2,199,398,verified,Zbotic,https://zbotic.in/product/high-quality-2600mah-icr-18650-3-7v-lithium-ion-battery-3c-ev-grade/
+Power,"18650 holder, 2 cells (rewire in parallel)",1,15.22,15.22,verified,Zbotic,https://zbotic.in/product/18650-battery-holder-2-cell/
+Buttons,12 mm tactile switch + 3D-printed 40 mm cap,3,15,45,estimate,,
+Misc,"Passives (incl. 1 uF film caps, 1% resistors), BAT54 x3, 1000 uF cap, perfboard, wire, connectors",1,330,330,estimate,,
+Mechanical,"Footrest board, hinge, screws",1,250,250,estimate,local hardware shop,
+Mechanical,3D-printed load-cell mounts + electronics box (filament),1,150,150,estimate,,
+,,,,4660.82,,,
